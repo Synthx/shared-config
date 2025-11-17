@@ -1,0 +1,33 @@
+{
+    "name": "@iampinpin/prettier-config",
+    "description": "A simple & effective Prettier configuration",
+    "version": "1.0.0",
+    "type": "module",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Synthx/shared-config"
+    },
+    "main": "dist/index.mjs",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "bun run esbuild.config.ts",
+        "ci:format": "bunx prettier --check .",
+        "format": "bunx prettier --write ."
+    },
+    "prettier": "./dist/index.mjs",
+    "dependencies": {
+        "prettier-plugin-css-order": "^2.1.2",
+        "prettier-plugin-organize-attributes": "^1.0.0",
+        "prettier-plugin-organize-imports": "^4.1.0"
+    },
+    "devDependencies": {
+        "@types/bun": "latest"
+    },
+    "peerDependencies": {
+        "prettier": "^3",
+        "typescript": "^5"
+    }
+}

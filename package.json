@@ -1,0 +1,16 @@
+{
+  "name": "@iampinpin/shared-config",
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "ci:format": "bun run --filter '*' ci:format",
+    "format": "bun run --filter '*' format"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "esbuild": "^0.27.0",
+    "prettier": "^3.6.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}

@@ -4,18 +4,11 @@ on:
   push:
     branches: [ main ]
 jobs:
-  build:
+  check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
-      - run: cd packages/${{ matrix.package }}-config
       - run: bun install
-      - run: bun run ci:format
       - run: bun run build
-        if: github.ref == 'refs/heads/main'
-      - run: bun publish
-        if: github.ref == 'refs/heads/main'
-    strategy:
-      matrix:
-        package: [ prettier, stylelint ]
+      - run: bun run ci:format

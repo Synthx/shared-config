@@ -8,6 +8,9 @@
         "type": "git",
         "url": "https://github.com/Synthx/shared-config"
     },
+    "publishConfig": {
+        "access": "public"
+    },
     "main": "dist/index.mjs",
     "files": [
         "dist"

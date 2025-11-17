@@ -3,7 +3,8 @@
   "workspaces": ["packages/*"],
   "scripts": {
     "ci:format": "bun run --filter '*' ci:format",
-    "format": "bun run --filter '*' format"
+    "format": "bun run --filter '*' format",
+    "build": "bun run --filter '*' build"
   },
   "devDependencies": {
     "@types/bun": "latest",
